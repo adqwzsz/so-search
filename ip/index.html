@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>IP检测</title>
     <link rel="icon" href="logo.png" sizes="192x192" />
@@ -28,136 +29,137 @@
     <meta name="x5-page-mode" content="app">
     <!--QQ应用模式-->
     <style>
-    * {
-        padding: 0;
-        margin: 0;
-        outline: none;
-    }
-
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-    }
-
-    body {
-        /*  background: #fff;*/
-        color: #fff;
-    }
-
-    body {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-    }
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
+        * {
+            padding: 0;
+            margin: 0;
+            outline: none;
         }
 
-        50% {
-            background-position: 100% 50%;
+        html,
+        body {
+            width: 100%;
+            height: 100%;
         }
 
-        100% {
-            background-position: 0% 50%;
+        body {
+            /*  background: #fff;*/
+            color: #fff;
         }
-    }
 
-    img {
-        vertical-align: middle;
-        margin-top: -2px;
-    }
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
 
-    ul {
-        list-style: none;
-        width: calc(100% - 60px);
-        max-width: 720px;
-        line-height: 26px;
-        position: relative;
-        margin: 50px auto 0;
-        display: block;
-        border: 1px solid #fff;
-        border-radius: 15px;
-    }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
 
-    li {
-        width: 100%;
-        display: block;
-        float: left;
-        text-align: center;
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        border-bottom: 1px solid #fff;
-        height: 50px;
-        line-height: 50px;
-    }
+            50% {
+                background-position: 100% 50%;
+            }
 
-    li:nth-child(2) {
-        height: 30px;
-        line-height: 30px;
-    }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-    li:last-child {
-        border: none;
-        clear: both;
-        float: none;
-    }
+        img {
+            vertical-align: middle;
+            margin-top: -2px;
+        }
 
-    span {
-        display: block;
-        width: 70%;
-        float: left;
-        height: 100%;
-        overflow: hidden;
-    }
+        ul {
+            list-style: none;
+            width: calc(100% - 60px);
+            max-width: 720px;
+            line-height: 26px;
+            position: relative;
+            margin: 50px auto 0;
+            display: block;
+            border: 1px solid #fff;
+            border-radius: 15px;
+        }
 
-    li span:nth-child(1) {
-        border-right: 1px solid #fff;
-        width: calc(30% - 1px);
-    }
+        li {
+            width: 100%;
+            display: block;
+            float: left;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            border-bottom: 1px solid #fff;
+            height: 50px;
+            line-height: 50px;
+        }
 
-    span a {
-        display: block;
-        width: 90px;
-        height: 30px;
-        font-size: 14px;
-        line-height: 30px;
-        border: 1px solid #fff;
-        border-radius: 15px;
-        color: #000;
-        cursor: pointer;
-        overflow: hidden;
-        margin: 15px auto 0;
-        text-decoration: none;
-        background:#fff;
-    }
+        li:nth-child(2) {
+            height: 30px;
+            line-height: 30px;
+        }
 
-    span a:active {
-        border-color: #fff;
-        box-shadow: 0 1px 20px 0 rgba(60, 60, 60, 0.1)
-    }
+        li:last-child {
+            border: none;
+            clear: both;
+            float: none;
+        }
 
-    .flag {
-        display: inline-block;
-        height: 12px;
-    }
+        span {
+            display: block;
+            width: 70%;
+            float: left;
+            height: 100%;
+            overflow: hidden;
+        }
 
-    .other {
-        width: 100%;
-        margin: 20px auto;
-        font-size: 12px;
-        line-height: 30px;
-        text-align: center;
-    }
+        li span:nth-child(1) {
+            border-right: 1px solid #fff;
+            width: calc(30% - 1px);
+        }
+
+        span a {
+            display: block;
+            width: 90px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            border: 1px solid #fff;
+            border-radius: 15px;
+            color: #000;
+            cursor: pointer;
+            overflow: hidden;
+            margin: 15px auto 0;
+            text-decoration: none;
+            background: #fff;
+        }
+
+        span a:active {
+            border-color: #fff;
+            box-shadow: 0 1px 20px 0 rgba(60, 60, 60, 0.1)
+        }
+
+        .flag {
+            display: inline-block;
+            height: 12px;
+        }
+
+        .other {
+            width: 100%;
+            margin: 20px auto;
+            font-size: 12px;
+            line-height: 30px;
+            text-align: center;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 </head>
 
 <body>
     <ul>
-        <li style="font-size: 24px; height: 80px; line-height: 80px; letter-spacing: 5px;"><img src="logo.png" height="24" style="display: inline-block; margin-top: -6px; border-radius: 50%;"> IP地址查询</li>
+        <li style="font-size: 24px; height: 80px; line-height: 80px; letter-spacing: 5px;"><img src="./logo.png"
+                height="24" style="display: inline-block; margin-top: -6px; border-radius: 50%;"> IP地址查询</li>
         <li>
             <span height="30" width="20%">检测点</span>
             <span width="40%">检测结果</span>
@@ -189,7 +191,8 @@
         </li>
         <li style="height: 60px;">
             <span style="border: none; width: 50%;">
-                <a style="background: #29f; color: #fff; border: none;" href="https://5iux.speedtestcustom.com/" target="_blank">测速</a>
+                <a style="background: #29f; color: #fff; border: none;" href="https://5iux.speedtestcustom.com/"
+                    target="_blank">测速</a>
             </span>
             <span style="border: none; width: 50%;">
                 <a href="javascript:window.location.reload();">刷新</a>
@@ -197,86 +200,91 @@
         </li>
     </ul>
     <script>
-    $(document).ready(function() {
-        $.ajax({
-            //太平洋 ip接口
-            url: "https://whois.pconline.com.cn/ipJson.jsp",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
-            },
-            error: function() {
-                $("#pconline").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-        $.ajax({
-            url: "https://api-ipv4.ip.sb/geoip",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country + "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" + re.country_code+".svg'>");
-            },
-            error: function() {
-                $("#ipsb").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
-        $.ajax({
-            url: "https://freegeoip.app/json/",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_code + "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" + re.country_code+".svg'>");
-            },
-            error: function() {
-                $("#freegeoip").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
-        });
+        $(document).ready(function () {
+            $.ajax({
+                //太平洋 ip接口
+                url: "https://whois.pconline.com.cn/ipJson.jsp",
+                dataType: "jsonp",
+                timeout: 5000,
+                success: function (re) {
+                    $("#pconline").html(re.ip + "&nbsp;|&nbsp;" + re.city);
+                },
+                error: function () {
+                    $("#pconline").html("<font color='red'>链接失败</font>");
+                },
+                complete: function () {},
+            });
+            $.ajax({
+                url: "https://api-ipv4.ip.sb/geoip",
+                dataType: "jsonp",
+                timeout: 5000,
+                success: function (re) {
+                    $("#ipsb").html(re.ip + "&nbsp;|&nbsp;" + re.country +
+                        "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" +
+                        re.country_code + ".svg'>");
+                },
+                error: function () {
+                    $("#ipsb").html("<font color='red'>链接失败</font>");
+                },
+                complete: function () {},
+            });
+            $.ajax({
+                url: "https://freegeoip.app/json/",
+                dataType: "jsonp",
+                timeout: 5000,
+                success: function (re) {
+                    $("#freegeoip").html(re.ip + "&nbsp;|&nbsp;" + re.country_code +
+                        "&nbsp;&nbsp;<img class='flag' src='https://cdn.jsdelivr.net/gh/5iux/dyimg/flag/" +
+                        re.country_code + ".svg'>");
+                },
+                error: function () {
+                    $("#freegeoip").html("<font color='red'>链接失败</font>");
+                },
+                complete: function () {},
+            });
 
-        function ping(url) {
-            var img = new Image();
-            var start = new Date().getTime();
-            img.src = url + start;
-            var flag = false; //无法访问
-            img.onload = function() {
-                flag = true;
-                $("#appspot").html("<font color='green'>链接成功！</font>");
-            };
-            img.onerror = function() {
-                flag = true;
-                $("#appspot").html("<font color='green'>链接成功！</font>");
-            };
-            var timer = setTimeout(function() {
-                if (!flag) { //如果真的无法访问
-                    flag = false;
-                    $("#appspot").html("<font color='red'>链接失败</font>");
-                }
-            }, 1500);
-        }
+            function ping(url) {
+                var img = new Image();
+                var start = new Date().getTime();
+                img.src = url + start;
+                var flag = false; //无法访问
+                img.onload = function () {
+                    flag = true;
+                    $("#appspot").html("<font color='green'>链接成功！</font>");
+                };
+                img.onerror = function () {
+                    flag = true;
+                    $("#appspot").html("<font color='green'>链接成功！</font>");
+                };
+                var timer = setTimeout(function () {
+                    if (!flag) { //如果真的无法访问
+                        flag = false;
+                        $("#appspot").html("<font color='red'>链接失败</font>");
+                    }
+                }, 1500);
+            }
 
-        $.ajax({
-            url: "https://ipquery.et.r.appspot.com",
-            dataType: "jsonp",
-            timeout: 5000,
-            success: function(re) {
-                $("#appspot").html(re.address + "&nbsp;|&nbsp;" + re.geographical + "&nbsp;&nbsp;" + re.flag);
-            },
-            error: function(re) {
-                var d = new Date().getTime();
-                ping('https://www.google.com/favicon.ico?t=' + d);
+            $.ajax({
+                url: "https://ipquery.et.r.appspot.com",
+                dataType: "jsonp",
+                timeout: 5000,
+                success: function (re) {
+                    $("#appspot").html(re.address + "&nbsp;|&nbsp;" + re.geographical +
+                        "&nbsp;&nbsp;" + re.flag);
+                },
+                error: function (re) {
+                    var d = new Date().getTime();
+                    ping('https://www.google.com/favicon.ico?t=' + d);
 
-                //$("#appspot").html("<font color='red'>链接失败</font>");
-            },
-            complete: function() {},
+                    //$("#appspot").html("<font color='red'>链接失败</font>");
+                },
+                complete: function () {},
+            });
         });
-    });
     </script>
     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script>
-    $("#sohu").html(returnCitySN.cip + "&nbsp;|&nbsp;" + returnCitySN.cname);
+        $("#sohu").html(returnCitySN.cip + "&nbsp;|&nbsp;" + returnCitySN.cname);
     </script>
 </body>
 
