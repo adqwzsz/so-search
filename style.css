@@ -54,9 +54,10 @@ svg.icon {
     line-height: 50px;
     text-indent: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 5px;
     background-color: #fff;
-    border: none;
+    border-style: 5px solid;
+    border-color: #687BE8;
     box-shadow: 0 0.5rem 0.625rem #d4d4d44d;
     transition: 0.3s all linear;
 }
