@@ -4,16 +4,28 @@ $(function() {
 		$('#search-text').trigger('keyup');
 		event.stopPropagation();
 	});
-	$('#search-text').keyup(function(event) {
-		if (event.keyCode == 13) {
-			alert('adsd');
+	$('#search-text').bind('keydown',function(event){
+		if (event.keyCode == "13") {
+			const keywords = $(this).val();
+			if (keywords == '') return;
+			let cookieVal = localStorage.getItem('cvals');
+		if (!cookieVal) {
+			cookieVal = '[]';
 		}
-	});
-	$('#search-text').keyup(function() {
-		var keywords = $(this).val();
+		cookieVal = JSON.parse(cookieVal);
+		cookieVal.unshift(keywords);
+		if (cookieVal.length > 5) {
+			cookieVal.pop();
+		}
+		localStorage.setItem('cvals', JSON.stringify(cookieVal));
+		}
+	});  
+	$('#search-text').keyup(function () {
+	
+		const keywords = $(this).val();
 		if (keywords == '') {
 			// $('#word').hide();
-			var cookieVal = localStorage.getItem('cvals');
+			let cookieVal = localStorage.getItem('cvals');
 			if (!cookieVal) {
 				$('#word').hide();
 				return;
